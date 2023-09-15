@@ -1,13 +1,12 @@
 import React from 'react'
-import './Header.css'
-import image from './images/header-image.jpg';
+import {Link} from "react-router-dom"
 
-function Header ()
+function Navbar ()
 {
     return <div className='header-div'>
         <nav className="navbar navbar-expand-sm bg-light">
             <div className="container-fluid">
-                <a class="navbar-brand" href="#">Devlink Marketplace</a>
+                <Link class="navbar-brand" to="/">Devlink Marketplace</Link>
 
                 <ul className="navbar-nav" sytle="float: right">
                     <li className="nav-item">
@@ -17,16 +16,15 @@ function Header ()
                     <a className="nav-link" href="#">Find Jobs</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Login</a>
+                    <Link className="nav-link" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#">Create Account</a>
+                    <Link className="nav-link" to="/signup">Create Account</Link>
                     </li>
                 </ul>
             </div>
         </nav>
-        <img src={image} alt='Header image'/>
     </div>
 }
 
-export default Header
+export default Navbar
